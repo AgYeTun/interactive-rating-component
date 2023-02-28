@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Feedback from './components/Feedback'
 import Thankyou from './components/Thankyou'
+import 'animate.css'
 
 const App = () => {
   return (

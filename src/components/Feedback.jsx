@@ -1,13 +1,21 @@
 import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ReactSVG } from 'react-svg'
 
 const Feedback = () => {
     const [rate, setRate] = useState('')
 
-    console.log(rate);
+    const navigate = useNavigate()
+
+    const [active, setActive] = useState(false)
+
+    const handleSubmit = () => {
+        setActive(!active)
+        setTimeout(() => navigate(`thankyou/${rate}`), 500)
+    }
+
   return (
-    <div className='w-[400px] h-fit bg-dark-blue p-[36px] flex flex-col gap-3 rounded-[30px] shadow-lg'>
+    <div className={`w-[400px] h-fit bg-dark-blue p-[36px] mx-5 flex flex-col gap-3 rounded-[30px] shadow-lg ${active && 'animate__animated animate__zoomOut'}`}>
         <div className="w-12 h-12 bg-medium-grey flex justify-center items-center rounded-full mb-4">
             <ReactSVG src='./src/assets/images/icon-star.svg' />
         </div>
@@ -30,9 +38,7 @@ const Feedback = () => {
                 5
             </div>
         </div>
-        <Link to={`thankyou/${rate}`} className='grid bg-orange rounded-full text-white py-3 mt-5 hover:bg-white hover:text-orange'>
-            <button className='tracking-widest'>SUBMIT</button>
-        </Link>
+        <button onClick={() => rate !== '' && (handleSubmit())} className='grid bg-orange rounded-full text-white py-3 mt-5 hover:bg-white hover:text-orange tracking-widest'>SUBMIT</button>
     </div>
   )
 }
