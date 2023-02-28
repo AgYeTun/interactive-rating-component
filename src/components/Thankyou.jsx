@@ -8,7 +8,7 @@ const Thankyou = () => {
   return (
     <div className="w-[400px] h-fit bg-dark-blue py-[36px] px-5 mx-5 flex flex-col items-center gap-7 rounded-[30px] shadow-lg animate__animated animate__zoomIn">
       <div className="">
-            <ReactSVG src='../src/assets/images/illustration-thank-you.svg' />
+            <ReactSVG src="../src/assets/images/illustration-thank-you.svg" />
       </div>
       <p className="text-orange bg-medium-grey rounded-full py-1 px-5 w-fit">You selected {rate} out of 5</p>
       <h1 className="text-white text-3xl">Thank You!</h1>

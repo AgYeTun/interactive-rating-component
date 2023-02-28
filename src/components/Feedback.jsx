@@ -17,7 +17,7 @@ const Feedback = () => {
   return (
     <div className={`w-[400px] h-fit bg-dark-blue p-[36px] mx-5 flex flex-col gap-3 rounded-[30px] shadow-lg ${active && 'animate__animated animate__zoomOut'}`}>
         <div className="w-12 h-12 bg-medium-grey flex justify-center items-center rounded-full mb-4">
-            <ReactSVG src='src/assets/images/icon-star.svg' />
+            <ReactSVG src="../src/assets/images/icon-star.svg" />
         </div>
         <h1 className='text-white text-2xl'>How did we do?</h1>
         <p className='text-light-grey text-[15px]'>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
