@@ -10,7 +10,7 @@ module.exports = {
         "orange": "#fb7413",
         "light-grey": "hsl(217, 12%, 63%)",
         "medium-grey": "hsl(216, 12%, 24%)",
-        "dark-blue": "hsl(213, 19%, 18%)",
+        "dark-blue": "hsl(213, 19%, 14%)",
         "very-dark-blue": "hsl(216, 12%, 8%)",
       },
     },
